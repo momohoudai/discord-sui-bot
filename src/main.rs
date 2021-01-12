@@ -210,7 +210,7 @@ fn eval_postfix(postfix: &Vec<String>) -> Option<(i32, String)> {
                     Ok(x) => x,
                     Err(_) => return None,   
                 };
-                
+               
 
                 // Request: they want to see each individual roll
                 info.push_str(format!("{}d{} = ", times, sides).as_str());
@@ -218,7 +218,8 @@ fn eval_postfix(postfix: &Vec<String>) -> Option<(i32, String)> {
                 let mut sum: i32 = 0;
                 if times > 1 {
                     for i in 0..times {
-                        let result = rng.gen_range(times, sides + 1);
+                        println!("{} d {}", i, times);
+                        let result = rng.gen_range(1, sides + 1);
                         sum += result;
                         if i == 0 {
                             info.push_str(format!("{}", result).as_str());
