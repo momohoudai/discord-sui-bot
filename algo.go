@@ -113,13 +113,13 @@ func Operate(L int, R int, Op byte) (Result int, Err error) {
 	return
 }
 
-type Evaluate_Postfix_Result struct {
+type EvaluatePostfixResult struct {
 	Sum      int
 	DiceInfo string
 }
 
 // Returns: Success, Sum, Rolls
-func EvaluatePostfix(Postfix []string) (Result *Evaluate_Postfix_Result, Err error) {
+func EvaluatePostfix(Postfix []string) (Result *EvaluatePostfixResult, Err error) {
 	Result = nil
 	Err = nil
 
@@ -200,7 +200,7 @@ func EvaluatePostfix(Postfix []string) (Result *Evaluate_Postfix_Result, Err err
 	}
 
 	if len(OperandStack) == 1 {
-		Result = &Evaluate_Postfix_Result{}
+		Result = &EvaluatePostfixResult{}
 		Result.Sum = OperandStack[0]
 		Result.DiceInfo = DiceInfo
 		return

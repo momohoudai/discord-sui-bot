@@ -13,7 +13,7 @@ var (
 	GlobalCommandArgSplitter *regexp.Regexp
 )
 
-const DiscordMessageMaxChars int = 1000
+const DiscordMessageMaxChars int = 2000
 
 func InitCommands() {
 	GlobalCommandArgSplitter = regexp.MustCompile(`(?i)(?:[^\s"]+\b|:|(")[^"]*("))+|[=!&|~+\-\*\/\%]`)
