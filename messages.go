@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-const MsgVersion = "I'm SuiBot v6.0.0, written in Golang!"
+const MsgVersion = "I'm SuiBot v7.0.1, written in Golang!"
 
 const MsgBirthdayKaru = "Ah...erm...K-Karu's birthday is on **April 12th**...I remember okay!? Are you testing me, mouu >//<"
 const MsgBirthdayRudo = "Oh, Rudo's birthday is on **November 30th**. You should've looked at his face when I brought back a cake for him ^^;"
